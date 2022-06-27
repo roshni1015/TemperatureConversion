@@ -8,16 +8,36 @@ namespace Temperatureconversion
 {
     public class TemperatureCel
     {
+        double Celsius;
         double fahrenheit;
-        double Celsius = 36;
         public void TemCel()
         {
+            Console.WriteLine("Enter a Input to convert in Fahrenheit");
+            double Celsius = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("--------------------------------------------");
             Console.WriteLine("Celsius: " + Celsius);
             fahrenheit = (Celsius * 9) / 5 + 32;
             Console.WriteLine("Fahrenheit: " + fahrenheit);
             Console.ReadLine();
+            Console.WriteLine("*********************************************************");
         }
-       
-        
+        public void CelTemp()
+        {
+
+            Console.WriteLine("Enter a Input to convert in Celsius");
+            double Celsius = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("FeHrenheit: " + fahrenheit);
+            Celsius = (fahrenheit - 32) * 5/9;
+            Console.WriteLine("Celsius: " + Celsius);
+            Console.ReadLine();
+            Console.WriteLine("*********************************************************");
+
+
+
+        }
+
+
+
     }
 }
